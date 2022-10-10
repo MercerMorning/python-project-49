@@ -12,7 +12,8 @@ def main():
         if (ask(random.randint(0, 22))):
             right_answer_count += 1
         else:
-            right_answer_count = 0
+            print(f'Let\'s try again, {name}!')
+            return
     print(f'Congratulations, {name}!')
 
 
@@ -22,4 +23,5 @@ def ask(number):
     if (prompt.string('Your answer: ') == is_even_number):
         print('Correct!')
         return True
+
     return False
