@@ -17,7 +17,10 @@ def main():
 def ask(first_number, second_numer, operator):
     expression = f'{first_number} {operator} {second_numer}'
     print('Question: ' + expression)
-    if int(prompt.string('Your answer: ')) == eval(expression):
+    answer = prompt.string('Your answer: ')
+    expression_result = eval(expression);
+    if int(answer) == expression_result:
         print('Correct!')
         return True
+    print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{expression_result}\'.')
     return False
