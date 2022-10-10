@@ -28,7 +28,7 @@ def ask(first_number, second_numer):
 
 def generate_progression():
     current_number = random.randint(0, 22)
-    progression_length = 10
+    progression_length = 9
     progression_space_index = random.randint(0, progression_length)
     index = 0
     progression = str(current_number)
@@ -38,7 +38,7 @@ def generate_progression():
         current_number += step
         if (progression_space_index == index):
             space_value = current_number
-            progression += ' ...'
+            progression += ' ..'
         else:
             progression += f' {current_number}'
 
