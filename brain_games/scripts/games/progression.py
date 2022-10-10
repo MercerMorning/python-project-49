@@ -32,7 +32,7 @@ def generate_progression():
     progression_space_index = random.randint(0, progression_length)
     index = 0
     progression = str(current_number)
-    step = random.randint(0, 10)
+    step = random.randint(0, 9)
     space_value = ''
     while index < progression_length:
         current_number += step
