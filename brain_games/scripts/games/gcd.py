@@ -9,22 +9,22 @@ def main():
     print('Find the greatest common divisor of given numbers.')
     right_answer_count = 0
     while (right_answer_count != 3):
-        if (ask(random.randint(0, 22), random.randint(0, 22))):
+        if (ask(random.randint(0, 22), random.randint(0, 22), name)):
             right_answer_count += 1
         else:
-            print(f'Let\'s try again, {name}!')
             return
     print(f'Congratulations, {name}!')
 
 
-def ask(first_number, second_numer):
+def ask(first_number, second_numer, name):
     print(f'Question: {first_number} {second_numer}')
     gcd = find_gcd(first_number, second_numer)
     answer = prompt.string('Your answer: ')
     if int(answer) == gcd:
         print('Correct!')
         return True
-    print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{gcd}\'.')
+    print(f'''\'{answer}\' is wrong answer ;(. Correct answer was \'{gcd}\'.
+Let's try again, {name}!''')
     return False
 
 
