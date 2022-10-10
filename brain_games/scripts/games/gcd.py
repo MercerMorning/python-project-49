@@ -11,6 +11,9 @@ def main():
     while (right_answer_count != 3):
         if (ask(random.randint(0, 22), random.randint(0, 22))):
             right_answer_count += 1
+        else:
+            print(f'Let\'s try again, {name}!')
+            return
     print(f'Congratulations, {name}!')
 
 
