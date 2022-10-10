@@ -6,21 +6,25 @@ def main():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print('What is the result of the expression?')
-    operators = ['+', '-', '*']
     right_answer_count = 0
     while (right_answer_count != 3):
-        if (ask(random.randint(0, 22), random.randint(0, 22), random.choice(operators))):
+        if (ask()):
             right_answer_count += 1
     print(f'Congratulations, {name}!')
 
 
-def ask(first_number, second_numer, operator):
+def ask():
+    operators = ['+', '-', '*']
+    first_number = random.randint(0, 22)
+    second_numer = random.randint(0, 22)
+    operator = random.choice(operators)
     expression = f'{first_number} {operator} {second_numer}'
     print('Question: ' + expression)
     answer = prompt.string('Your answer: ')
-    expression_result = eval(expression);
-    if int(answer) == expression_result:
+    expr_res = eval(expression)
+    if int(answer) == expr_res:
         print('Correct!')
         return True
-    print(f'\'{answer}\' is wrong answer ;(. Correct answer was \'{expression_result}\'.')
+    text = f"'{answer}' is wrong answer ;(. Correct answer was '{expr_res}'."
+    print(text)
     return False

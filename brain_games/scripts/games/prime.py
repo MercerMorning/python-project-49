@@ -21,6 +21,7 @@ def ask(number):
         return True
     return False
 
+
 def is_prime(n):
     d = 2
     while n % d != 0:
