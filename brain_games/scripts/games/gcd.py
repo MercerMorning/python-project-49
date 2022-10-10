@@ -9,7 +9,7 @@ def main():
     print('Find the greatest common divisor of given numbers.')
     right_answer_count = 0
     while (right_answer_count != 3):
-        if (ask(random.randint(0, 22), random.randint(0, 22), name)):
+        if (ask(random.randint(1, 22), random.randint(1, 22), name)):
             right_answer_count += 1
         else:
             return
